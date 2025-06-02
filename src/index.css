@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark-500 text-gray-100;
+    font-family: 'Inter', 'Arial', sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  * {
+    @apply border-gray-700;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-white;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-dark-400 shadow-lg rounded-lg p-6 border border-gray-700;
+  }
+
+  .button {
+    @apply bg-primary text-white font-bold py-2 px-4 rounded hover:bg-primary-dark transition-colors;
+  }
+
+  .button-secondary {
+    @apply bg-transparent border border-primary text-primary font-bold py-2 px-4 rounded hover:bg-primary hover:text-white transition-colors;
+  }
+
+  .hero {
+    @apply bg-gradient-to-br from-dark-400 to-dark-700 text-white text-center py-20;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-20;
+  }
+  
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .bg-glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .bg-glass-dark {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}

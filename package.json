@@ -1,0 +1,53 @@
+{
+  "name": "hackathon-ia-for-good",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Une campagne de sensibilisation écologique sur l'impact de l'IA.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "framer-motion": "^10.16.4",
+    "react-intersection-observer": "^9.5.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@vitejs/plugin-react": "^4.1.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
+    "vite": "^4.5.0"
+  },
+  "keywords": [
+    "ecology",
+    "awareness",
+    "campaign",
+    "react",
+    "vite",
+    "tailwindcss",
+    "ia",
+    "artificial-intelligence",
+    "carbon-footprint",
+    "sustainability"
+  ],
+  "author": "Hackathon IA for Good Team",
+  "license": "MIT",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
