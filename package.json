@@ -11,10 +11,10 @@
     "deploy:auto": "./deploy.sh"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "framer-motion": "^10.16.4",
     "gh-pages": "^6.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-intersection-observer": "^9.5.2"
   },
   "devDependencies": {
@@ -24,6 +24,7 @@
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.5",
+    "terser": "^5.40.0",
     "vite": "^4.5.0"
   },
   "keywords": [
