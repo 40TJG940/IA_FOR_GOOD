@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import ecoIALogo from '../assets/images/eco-ia-logo.png'; // 👈 Votre logo PNG
 
 const LoadingScreen = () => {
   return (
@@ -32,14 +33,27 @@ const LoadingScreen = () => {
               <div className="w-full h-full rounded-full bg-gray-900"></div>
             </motion.div>
             
-            {/* Icône centrale */}
+            {/* Logo ECO IA au centre (IMAGE PNG) */}
             <motion.div 
               className="absolute z-10 flex items-center justify-center"
               initial={{ scale: 0, rotate: -180 }}
               animate={{ scale: 1, rotate: 0 }}
               transition={{ delay: 0.5, duration: 0.8, type: "spring", stiffness: 200 }}
             >
-              <div className="text-5xl">🌱</div>
+              <motion.img 
+                src={ecoIALogo} 
+                alt="ECO IA Logo" 
+                className="w-20 h-24 object-contain drop-shadow-lg"
+                animate={{
+                  y: [0, -5, 0],
+                  filter: ["brightness(1)", "brightness(1.2)", "brightness(1)"],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              />
             </motion.div>
             
             {/* Particules flottantes */}
@@ -94,11 +108,23 @@ const LoadingScreen = () => {
           transition={{ delay: 1.2, duration: 0.4 }}
         >
           <motion.div
-            className="h-full bg-gradient-to-r from-green-500 to-blue-500 rounded-full"
+            className="h-full bg-gradient-to-r from-green-500 to-blue-500 rounded-full relative overflow-hidden"
             initial={{ width: "0%" }}
             animate={{ width: "100%" }}
             transition={{ delay: 1.4, duration: 1.5, ease: "easeInOut" }}
-          />
+          >
+            {/* Effet de brillance sur la barre */}
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-30"
+              animate={{ x: ["-100%", "100%"] }}
+              transition={{ 
+                duration: 1.5, 
+                repeat: Infinity, 
+                ease: "linear",
+                delay: 1.4 
+              }}
+            />
+          </motion.div>
         </motion.div>
         
         {/* Texte de chargement */}
@@ -134,6 +160,24 @@ const LoadingScreen = () => {
             💡 Saviez-vous ? ChatGPT consomme 10x plus qu'une recherche Google
           </motion.p>
         </motion.div>
+
+        {/* Halo lumineux autour du logo (bonus) */}
+        <motion.div
+          className="absolute top-8 left-1/2 transform -translate-x-1/2 w-40 h-40 rounded-full"
+          style={{
+            background: 'radial-gradient(circle, rgba(34, 197, 94, 0.2) 0%, rgba(34, 197, 94, 0.05) 50%, transparent 100%)',
+            filter: 'blur(15px)',
+          }}
+          animate={{
+            opacity: [0.3, 0.6, 0.3],
+            scale: [1, 1.2, 1],
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
       </div>
       
       {/* Effet de fond */}
